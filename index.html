@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e3b32"><meta name="description" content="مكتبة ديوان دان — مكتبة رقمية عربية أنيقة للكتب والروايات والأعمال الأدبية.">
+<title>مكتبة ديوان دان</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><div class="logo">د</div><div><strong>مكتبة ديوان دان</strong><small>DIWAN DAN</small></div></div>
+  <nav id="nav">
+    <button class="active" data-view="home">⌂ <span>الرئيسية</span></button>
+    <button data-view="books">▤ <span>المكتبة</span></button>
+    <button data-view="authors">♙ <span>المؤلفون</span></button>
+    <button data-view="categories">◈ <span>التصنيفات</span></button>
+    <button data-view="favorites">♡ <span>المفضلة</span></button>
+    <button data-view="about">ⓘ <span>عن المكتبة</span></button>
+  </nav>
+  <div class="sidebar-bottom"><div class="mini-stat"><span id="sideCount">0</span><small>كتاب في مكتبتك</small></div><button id="importBtn" class="ghost">↥ استيراد مكتبة</button><input id="importFile" type="file" accept=".json" hidden></div>
+</aside>
+<main>
+<header class="topbar"><div><span class="eyebrow">ديوان دان · المكتبة الرقمية</span><h1 id="title">مساحتك الخاصة للقراءة</h1></div><div class="actions"><button id="theme" class="icon" title="الوضع الليلي">☾</button><button id="exportBtn" class="icon" title="تصدير المكتبة">⇩</button><button id="add" class="primary">＋ إضافة كتاب</button></div></header>
+<section id="content"></section>
+</main>
+<dialog id="bookDialog"><form id="bookForm"><button type="button" id="closeDialog" class="close">×</button><h2 id="dialogTitle">إضافة كتاب جديد</h2><div class="cover-preview" id="coverPreview">غلاف الكتاب</div><label>عنوان الكتاب<input id="bookTitle" required placeholder="مثال: فاتن — فخ الحياة"></label><label>اسم المؤلف<input id="bookAuthor" placeholder="اسم المؤلف"></label><label>التصنيف<select id="bookCategory"><option>رواية</option><option>شعر</option><option>تاريخ</option><option>فكر</option><option>مذكرات</option><option>أخرى</option></select></label><label>وصف مختصر<textarea id="bookDesc" placeholder="نبذة عن الكتاب..."></textarea></label><label>ملف PDF اختياري<input id="bookPdf" type="file" accept="application/pdf"></label><label>صورة الغلاف اختيارية<input id="bookCover" type="file" accept="image/*"></label><div class="formrow"><button type="button" id="cancelDialog" class="secondary">إلغاء</button><button class="primary" type="submit">حفظ الكتاب</button></div></form></dialog>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
